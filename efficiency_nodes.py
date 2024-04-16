@@ -135,17 +135,19 @@ class TSC_EfficientLoader:
         # Retrieve cache numbers
         vae_cache, ckpt_cache, lora_cache, refn_cache = get_cache_numbers("Efficient Loader")
 
-        if lora_name != "None" or lora_stack:
+        if lora_name != "None" or (lora_stack and lora_stack != [(None, None, None)]):
             # Initialize an empty list to store LoRa parameters.
             lora_params = []
 
             # Check if lora_name is not the string "None" and if so, add its parameters.
             if lora_name != "None":
+                print("AMMA")
                 lora_params.append((lora_name, lora_model_strength, lora_clip_strength))
 
             # If lora_stack is not None or an empty list, extend lora_params with its items.
-            if lora_stack:
+            if (lora_stack and lora_stack != [(None, None, None)]):
                 lora_params.extend(lora_stack)
+                print("NANNA")
 
 
             print(lora_params)
