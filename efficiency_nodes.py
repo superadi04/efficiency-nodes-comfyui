@@ -141,6 +141,7 @@ class TSC_EfficientLoader:
 
             # Check if lora_name is not the string "None" and if so, add its parameters.
             if lora_name != "None":
+                print("HAI")
                 lora_params.append((lora_name, lora_model_strength, lora_clip_strength))
 
             # If lora_stack is not None or an empty list, extend lora_params with its items.

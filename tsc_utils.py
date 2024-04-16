@@ -355,7 +355,7 @@ def load_lora(lora_params, ckpt_name, id, cache=None, ckpt_cache=None, cache_ove
             return ckpt, clip
 
         lora_name, strength_model, strength_clip = lora_params[0]
-        print(lora_params)
+
         if os.path.isabs(lora_name):
             lora_path = lora_name
         else:
